@@ -30,7 +30,7 @@ The lab takes about **one hour** within a 4-hour session. The dbt project in thi
 1. **Register** at [https://fivetran-lab.web.app/](https://fivetran-lab.web.app/).
 2. **Check your email** for an invitation from `notifications@fivetran.com` and accept it to set your Fivetran password.
 3. **Open the lab credentials page** — your instructor will share the URL and passcode during the session. Keep this tab open; you'll reference Snowflake credentials and PostgreSQL host/user/password values from it throughout.
-4. **Log in to Fivetran** at [app.fivetran.com](https://app.fivetran.com) using the credentials from your invitation email.
+4. **Log in to Fivetran** using the credentials from your invitation email.
 
 ---
 
