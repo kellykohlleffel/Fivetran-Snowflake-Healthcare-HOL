@@ -178,7 +178,8 @@ This is the **AI-ready data stack** — production-grade ingestion, semantic tra
 ## Reference Documents
 
 - [Cortex Agent DDL](reference_docs/agents/healthcare/create_cortex_agent.sql) — full agent specification including orchestration prompt, tool spec, and the 10 sample questions
-- [dbt Project](dbt_project/) — project config, sources, staging, marts, and semantic view
+- [dbt Project (source)](dbt_project/) — project config, sources, staging, marts, and semantic view models
+- [Compiled SQL (what actually ran)](reference_docs/sql/healthcare/) — the pre-compiled DDL that was executed against `HOL_DATABASE_2` to materialize the three layers. Instructors can walk through this during Step 2 without running dbt.
 - [profiles.yml.example](dbt_project/profiles.yml.example) — template for running dbt against this project (no credentials shipped)
 
 ---
