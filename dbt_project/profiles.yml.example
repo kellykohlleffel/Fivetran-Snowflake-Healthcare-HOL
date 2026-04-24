@@ -1,0 +1,17 @@
+fivetran_snowflake_healthcare_hol:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      # Replace with your Snowflake account identifier
+      account: your-org-your-account
+      user: your-admin-user
+      # Use either password (or PAT as password) OR private_key_path
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      # private_key_path: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PATH') }}"
+      # private_key_passphrase: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PASSPHRASE') }}"
+      role: ACCOUNTADMIN
+      warehouse: HANDS_ON_LAB_WAREHOUSE
+      database: HOL_DATABASE_2
+      schema: healthcare_staging
+      threads: 4

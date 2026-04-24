@@ -1,0 +1,41 @@
+# Credentials / secrets (never commit)
+.env
+.env.*
+!.env.example
+profiles.yml
+*.p8
+*.pem
+*.key
+*.p12
+*.pfx
+*.pub
+credentials/
+credentials.json
+secrets.json
+service-account*.json
+*-credentials.json
+.snowflake/
+connections.toml
+
+# dbt artifacts (generated at runtime)
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+dbt_project/package-lock.yml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,42 @@
+name: fivetran_snowflake_healthcare_hol
+version: '1.0.0'
+config-version: 2
+
+profile: fivetran_snowflake_healthcare_hol
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+# Default database + source schema can be overridden at runtime:
+#   dbt run --vars '{"snowflake_database": "HOL_DATABASE_2", "healthcare_source_schema": "HOL_HEALTHCARE"}'
+# The defaults here match the pre-run HOL environment.
+vars:
+  snowflake_database: HOL_DATABASE_2
+  healthcare_source_schema: HOL_HEALTHCARE
+
+models:
+  fivetran_snowflake_healthcare_hol:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    healthcare:
+      +tags: ['healthcare', 'clinical']
+      staging:
+        +materialized: view
+        +schema: healthcare_staging
+      marts:
+        +materialized: table
+        +schema: healthcare_marts
+      semantic:
+        +materialized: semantic_view
+        +schema: healthcare_semantic
