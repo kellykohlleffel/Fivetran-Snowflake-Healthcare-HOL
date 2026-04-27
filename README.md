@@ -80,7 +80,7 @@ In this step you'll create a PostgreSQL connector that syncs healthcare clinical
 
 1. Open Snowsight using the URL on your lab credentials page.
 2. Log in with the shared Snowflake lab credentials from the same page.
-3. In the left nav, click **Data** → **Databases** → `HOL_DATABASE_2`.
+3. In the left nav, click **Catalog**, then click `HOL_DATABASE_2`.
 4. Find your schema — it will be named `<yourfirstname>_<yourlastname>_healthcare` (lowercase).
 5. Expand the schema → **Tables** → `CDS_RECORDS` → **Data Preview**.
 6. Scroll to the right to see the Fivetran-added `_fivetran_synced` column.
