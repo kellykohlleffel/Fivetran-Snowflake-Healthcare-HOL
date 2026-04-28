@@ -41,7 +41,11 @@ In this step you'll create a PostgreSQL connector that syncs healthcare clinical
 ### 1.1 Configure the PostgreSQL Source Connector
 
 1. In Fivetran, click **+ Connector**.
-2. Search for and select **Google Cloud PostgreSQL**.
+2. Search for and select **Google Cloud PostgreSQL** — make sure you pick this exact source type. Common mistakes to avoid:
+   - ❌ *Google Cloud MySQL* (different database engine — won't connect to our Postgres source)
+   - ❌ *Postgres RDS / Aurora Postgres / generic Postgres* (right engine, wrong cloud variant)
+   - ❌ *Snowflake* (Snowflake is the destination, not the source)
+   - ✅ **Google Cloud PostgreSQL** is the only correct choice for this lab
 3. Configure the connector using the table below — values for *host / user / password* come from your **lab credentials page**:
 
    | Setting | Value |
