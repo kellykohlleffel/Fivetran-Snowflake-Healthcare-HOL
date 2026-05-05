@@ -6,7 +6,7 @@ Welcome! In this hands-on lab you'll build part of a modern data + AI pipeline a
 - **Transform** the raw data into a Cortex-ready semantic layer with **dbt** *(instructor walkthrough — models already built and materialized)*
 - **Analyze** the data with natural language using a **Snowflake Cortex Agent** *(you'll do this)*
 
-The lab takes about **one hour** within a 4-hour session. The dbt project in this repo is pre-built and has already been executed — you don't run dbt yourself. The Cortex Agent is pre-configured and shared across all attendees.
+The lab takes about **one hour** within a 1.5 - 2 hour session. The dbt project in this repo is pre-built and has already been executed — you don't run dbt yourself. The Cortex Agent is pre-configured and shared across all attendees.
 
 ---
 
